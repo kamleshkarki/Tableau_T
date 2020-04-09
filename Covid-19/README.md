@@ -8,5 +8,5 @@ The time from exposure to onset of symptoms is typically around five days, but m
 While the majority of cases result in mild symptoms, some progress to viral pneumonia and multi-organ failure.
 As of 8 April 2020, more than 1.5 million, cases have been reported in more than 200 countries and territories,
 resulting in more than 87,900 deaths.More than 328,000 people have recovered.
-Motive to build.
+
 
