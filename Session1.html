@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BI :: Tableau</title>
+  <link rel="icon" href="image/icon.jpg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: right;
+  width: 180px;
+}
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Session 1</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Session <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Session1.html">Session 1</a></li>
+            <li><a href="#">Session 2</a></li>
+            <li><a href="#">Session 3</a></li>
+            <li><a href="#">Session 4</a></li>
+            <li><a href="#">Session 5</a></li>
+            <li><a href="#">Session 6</a></li>
+            <li><a href="#">Session 7</a></li>
+            <li><a href="#">Session 8</a></li>
+          </ul>
+        </li>
+        <!-- <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li> -->
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul> -->
+    </div>
+  </div>
+</nav>
+  
+<div class="container">
+  <h3>Tableau Cook Book</h3>
+  <li>Tableau - Home</li>
+  <li>Tableau - Overview</li>
+  <li>Tableau - Environment Setup</li>
+  <li>Tableau - Get Started</li>
+  <li>Tableau - Navigation</li>
+  <li>Tableau - Design Flow</li>
+  <li>Tableau - File Types</li>
+  <li>Tableau - Data Types</li>
+  <li>Tableau - Show Me</li>
+  <li>Tableau - Data Terminology</li>     
+</div>
+<div class="gallery">
+  <a target="_blank" href="#">
+     <p>Design Flow</p>
+    
+    <img src="image/designflow.jpg" alt="Flow" width="600" height="400" onclick="window.open('image/designflow.jpg', '_blank');" >
+
+  </a>
+  <!-- <div class="desc">Add a description of the image here</div> -->
+</div>
+<div class="container">
+  <h3>Assignment : 1</h3>
+  <li>Analyze titanic data set</li>
+  <li>Replace blank value to null</li>
+</div>
+
+
+</body>
+</html>
