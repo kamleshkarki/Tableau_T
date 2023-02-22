@@ -1,2 +1,4 @@
 **Start of the week for year**
 <sub>DATE(DATEPARSE ("yyyy-MM-dd", STR(DATE(DATETRUNC('week',[Date Feild Name]))) ))</sub>
+**Adhoc Qry Renam Column Field without making calculation Field **
+<p>//'Update FieldName' sift+enter [column Name]#sales</p>.
