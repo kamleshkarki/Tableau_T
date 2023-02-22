@@ -1,0 +1,8 @@
+<Category> | <AGG(Prmt Metrics YoY (cópia))>
+
+Year <Parameters.Year>: <AGG(Prmt Metrics Current Year)>
+Year <ATTR(Prmt Filter Last Year)>: <AGG(Prmt Metrics Last Year)>
+
+
+<Parameters.Metric> COMPARISION BY SUBCATEGORY
+<Sheet name="Subcategories" maxwidth="300" maxheight="300" filter="<Category>">
