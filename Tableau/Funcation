@@ -1,2 +1,2 @@
-* Start of the week for year * :
+**Start of the week for year** :
 DATE(DATEPARSE ("yyyy-MM-dd", STR(DATE(DATETRUNC('week',[Date Feild Name]))) ))
