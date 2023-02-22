@@ -1,0 +1,83 @@
+1.CYMTD--
+[YEAR]<=TODAY() AND DATETRUNC('month',[YEAR])=
+DATETRUNC('month',TODAY())
+
+2.CYQTD
+[YEAR]<=TODAY() AND DATETRUNC('quarter',[YEAR])=DATETRUNC('quarter',TODAY())
+
+3.PYMTD
+([YEAR]<=DATEADD("year",-1,TODAY())  AND [YEAR]>=
+DATEADD("year",-1,DATETRUNC("month",TODAY())))
+
+4.PYQTD
+[YEAR]<=DATEADD("year",-1,TODAY()) AND [YEAR]>=DATEADD("year",-1,DATETRUNC("quarter",TODAY()))
+
+5.PYTD
+[YEAR]<=DATEADD('year',-1,TODAY()) 
+AND DATEDIFF('year',[YEAR],TODAY())=1
+
+6.YTD
+[YEAR]<=TODAY() AND DATETRUNC('year',[YEAR])=DATETRUNC('year',TODAY())
+-----------------------
+7.MOM
+SUM([Revenue CY MTD]-([Revenue PY MTD]))/SUM([Revenue PY MTD])
+
+8.QOQ
+SUM([Revenue CY QTD]-([Revenue PY QTD]))/SUM([Revenue PY QTD])
+
+9.REVENUE CY
+CASE [Period]
+WHEN 'YoY' then [Revenue CYTD]
+WHEN 'QoQ' THEN [Revenue CY QTD]
+WHEN 'MoM' THEN [Revenue CY MTD]
+END
+
+10.Revenue CY MTD
+ZN(IF[CYMTD] THEN [REVENUE] END)
+
+11.Revenue CY QTD
+ZN(IF[CYQTD] THEN [REVENUE] END)
+
+12.Revenue CYTD
+ZN(IF [YTD] THEN [REVENUE] END)
+
+13.Revenue PY
+CASE [Period]
+WHEN 'YoY' then [Revenue PYTD]
+WHEN 'QoQ' THEN [Revenue PY QTD]
+WHEN 'MoM' THEN [Revenue PY MTD]
+END
+
+14.Revenue PY MTD
+ZN(IF [PYMTD] THEN [REVENUE] END)-----
+
+15.Revenue PY QTD
+ZN(IF[PYQTD] THEN [REVENUE] END)
+
+16.Revenue PYTD
+Zn(IF [PYTD] THEN [REVENUE] END)
+
+17.Year Filter
+YEAR(TODAY())-1
+
+18.Period  (This is parameter)
+YoY -- Year Over Year
+MOM --- Month Over Month
+QOQ --- Quarter Over Quarter
+
+19.DIFFERENCE%
+CASE [Period]
+WHEN 'YoY' then [YOY]
+WHEN 'QoQ' THEN [QOQ]
+WHEN 'MoM' THEN [MOM]
+END
+
+20. YOY
+ZN(sum([Revenue CYTD]) - SUM([Revenue PYTD]))/(SUM([Revenue PYTD]))
+
+21. Down Trend
+IF [Difference%]<0 Then "▼"
+
+22. Up Trend
+IF [Difference%]>0 Then "▲"
+END
