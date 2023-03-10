@@ -1,0 +1,3 @@
+How to change Column header name as using adoc: 
+(//start Date[shift+enter]
+[date])--(column name)
