@@ -1,0 +1,19 @@
+Applying proper case in tableau:
+ 
+Note: "Supplier type" is a column name in which we have to apply proper case using calculated field
+ 
+UPPER(LEFT(SPLIT([Supplier Type],' ',1),1)) +
+
+LOWER(MID(SPLIT([Supplier Type],' ',1),2,20)) +
+
+' ' +
+
+UPPER(LEFT(SPLIT([Supplier Type],' ',2),1)) +
+
+LOWER(MID(SPLIT([Supplier Type],' ',2),2,20)) +
+
+' ' +
+
+UPPER(LEFT(SPLIT([Supplier Type],' ',3),1)) +
+
+LOWER(MID(SPLIT([Supplier Type],' ',3),2,20))
